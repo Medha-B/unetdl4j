@@ -347,4 +347,7 @@ $RECYCLE.BIN/
 *.tiff
 *.tif
 
+# Model weights
+*.zip
+
 # End of https://www.toptal.com/developers/gitignore/api/macos,linux,windows,emacs,vim,eclipse,jetbrains+all,netbeans,java,maven
