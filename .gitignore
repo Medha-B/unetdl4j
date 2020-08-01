@@ -343,7 +343,7 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# Dataset
+# Dataset and Output
 *.tiff
 *.tif
 
