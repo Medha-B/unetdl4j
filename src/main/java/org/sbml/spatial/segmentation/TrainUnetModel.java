@@ -11,6 +11,7 @@ import org.deeplearning4j.optimize.listeners.ScoreIterationListener;
 import org.deeplearning4j.ui.api.UIServer;
 import org.deeplearning4j.ui.model.stats.StatsListener;
 import org.deeplearning4j.ui.model.storage.InMemoryStatsStorage;
+import org.deeplearning4j.zoo.ZooModel;
 import org.deeplearning4j.zoo.model.UNet;
 import org.nd4j.linalg.api.ndarray.INDArray;
 import org.nd4j.linalg.dataset.api.iterator.DataSetIterator;
@@ -26,8 +27,7 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.util.HashMap;
 import java.util.Map;
-import org.nd4j.linalg.learning.config.Adam;
-//import org.deeplearning4j.zoo.ZooModel;
+
 
 
 public class TrainUnetModel {
@@ -116,14 +116,14 @@ public class TrainUnetModel {
 
       int numEpochs = 1;
 
-      ComputationGraph model  = UNet.builder().updater(new Adam(1e-4)).build().init();
+      //ComputationGraph model  = UNet.builder().updater(new Adam(1e-4)).build().init();
       //ComputationGraph model  = UNet.builder().updater(new Adam(new MapSchedule(ScheduleType.ITERATION, learningScheduleMap))).build().init();
       
       
       //To change the number of input channels from 3 to 1
-        //ZooModel unet = UNet.builder().build();
-	    //unet.setInputShape(new int[][]{{1, 128, 128}});
-	    //ComputationGraph model = (ComputationGraph) unet.init();
+        ZooModel unet = UNet.builder().build();
+	    unet.setInputShape(new int[][]{{1, 128, 128}});
+	    ComputationGraph model = (ComputationGraph) unet.init();
 	    
 	    StatsStorage ss = new InMemoryStatsStorage();
 	    uiServer.attach(ss);
