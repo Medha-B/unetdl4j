@@ -12,9 +12,9 @@ import org.nd4j.linalg.dataset.api.preprocessor.DataNormalization;
 import org.nd4j.linalg.dataset.api.preprocessor.ImagePreProcessingScaler;
 
 public class PreProcess {
-	private static final int WIDTH = 128;
-	private static final int HEIGHT = 128;
-	private static final int CHANNELS = 3;
+	public static final int WIDTH = 128;
+	public static final int HEIGHT = 128;
+	public static final int CHANNELS = 3;
 	private File Rootdir;
 	private int batchSize;
 
@@ -47,7 +47,6 @@ public class PreProcess {
 		DataSetIterator imageDataSetIterator = new RecordReaderDataSetIterator(imageRecordReader, batchSize, labelIndex,
 				labelIndex, true);
 		scaler.fit(imageDataSetIterator);
-		imageDataSetIterator.setPreProcessor(scaler);
 		imageDataSetIterator.setPreProcessor(scaler);
 
 		return imageDataSetIterator;

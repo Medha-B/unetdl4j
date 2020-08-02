@@ -15,9 +15,9 @@ public class Inference {
 	// private ZooModel model;
 	private String path;
 	private String directory;
-	private static final int WIDTH = 128;
-	private static final int HEIGHT = 128;
-	private static final int CHANNELS = 3;
+	public static final int WIDTH = 128;
+	public static final int HEIGHT = 128;
+	public static final int CHANNELS = 3;
 
 	public Inference(ComputationGraph model, String path, String directory) {
 		this.model = model;
@@ -26,8 +26,8 @@ public class Inference {
 	}
 
 	/*
-	 * public Inference(ZooModel model, String path) { this.model = model; this.path
-	 * = path; }
+	 * public Inference(ZooModel model, String path, String directory) { this.model
+	 * = model; this.path = path; this.directory = directory;}
 	 */
 
 	// For inferring the model
