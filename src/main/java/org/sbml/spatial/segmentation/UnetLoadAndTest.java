@@ -1,6 +1,9 @@
 package org.sbml.spatial.segmentation;
 
+import java.awt.image.BufferedImage;
 import java.io.File;
+
+import javax.imageio.ImageIO;
 
 import org.deeplearning4j.nn.graph.ComputationGraph;
 import org.deeplearning4j.util.ModelSerializer;
@@ -36,7 +39,8 @@ public class UnetLoadAndTest {
 
 			log.info("*****EVALUATE MODEL******");
 			Inference infer = new Inference(model, pathToImage, directory);
-			infer.imgOut();
+			BufferedImage bufimg = infer.imgOut();
+			ImageIO.write(bufimg, "tif", new File(directory + File.separator + "outputUnet.tif"));
 
 		} catch (Exception e) {
 			System.err.println("Oooooops");

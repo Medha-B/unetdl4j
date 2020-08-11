@@ -4,8 +4,6 @@ import java.awt.Color;
 import java.awt.image.BufferedImage;
 import java.io.File;
 
-import javax.imageio.ImageIO;
-
 import org.datavec.image.loader.NativeImageLoader;
 import org.deeplearning4j.nn.graph.ComputationGraph;
 import org.nd4j.linalg.api.ndarray.INDArray;
@@ -31,7 +29,9 @@ public class Inference {
 	 */
 
 	// For inferring the model
-	public void imgOut() {
+	public BufferedImage imgOut() {
+		BufferedImage bufferedImage = new BufferedImage(WIDTH, HEIGHT, BufferedImage.TYPE_BYTE_GRAY);
+		;
 		try {
 			NativeImageLoader loader = new NativeImageLoader(HEIGHT, WIDTH, CHANNELS);
 			ImageType img = new ImageType(new File(path));
@@ -44,7 +44,8 @@ public class Inference {
 			for (INDArray out : output) {
 				out = out.reshape(1, HEIGHT, WIDTH);
 				// out = out.permute(2,1,0);
-				BufferedImage bufferedImage = new BufferedImage(WIDTH, HEIGHT, BufferedImage.TYPE_BYTE_GRAY);
+				// bufferedImage = new BufferedImage(WIDTH, HEIGHT,
+				// BufferedImage.TYPE_BYTE_GRAY);
 				for (int i = 0; i < WIDTH; i++) {
 					for (int j = 0; j < HEIGHT; j++) {
 						float f = out.getFloat(new int[] { 0, j, i });
@@ -57,13 +58,16 @@ public class Inference {
 					}
 				}
 
-				ImageIO.write(bufferedImage, "tif", new File(directory + File.separator + "outputUnet.tif"));
+				// ImageIO.write(bufferedImage, "tif", new File(directory + File.separator +
+				// "outputUnet.tif"));
 			}
+
 		} catch (Exception e) {
 			System.err.println("Oooooops");
 			e.printStackTrace();
 		}
 
+		return bufferedImage;
 	}
 
 }
