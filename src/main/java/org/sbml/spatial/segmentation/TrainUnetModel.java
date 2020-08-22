@@ -27,6 +27,7 @@ import org.nd4j.linalg.api.ndarray.INDArray;
 import org.nd4j.linalg.dataset.api.iterator.DataSetIterator;
 import org.nd4j.linalg.dataset.api.preprocessor.DataNormalization;
 import org.nd4j.linalg.dataset.api.preprocessor.ImagePreProcessingScaler;
+import org.nd4j.linalg.learning.config.Adam;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -122,7 +123,7 @@ public class TrainUnetModel {
 			// MapSchedule(ScheduleType.ITERATION, learningScheduleMap))).build().init();
 
 			// To change the number of input channels from 3 to 1
-			ZooModel unet = UNet.builder().build();
+			ZooModel unet = UNet.builder().updater(new Adam(1e-4)).build();
 			unet.setInputShape(new int[][] { { 1, 128, 128 } });
 			ComputationGraph model = (ComputationGraph) unet.init();
 
