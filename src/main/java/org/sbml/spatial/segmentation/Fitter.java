@@ -9,6 +9,7 @@ import org.deeplearning4j.ui.model.storage.InMemoryStatsStorage;
 import org.deeplearning4j.zoo.model.UNet;
 import org.nd4j.linalg.dataset.api.iterator.DataSetIterator;
 import org.nd4j.linalg.learning.config.Adam;
+//import org.deeplearning4j.zoo.ZooModel;
 
 /**
  * The class Fitter.
@@ -60,7 +61,7 @@ public class Fitter {
 //        ComputationGraph model  = UNet.builder().updater(new Adam(new MapSchedule(ScheduleType.ITERATION, learningScheduleMap))).build().init();
 
 		// For single channel input
-		// ZooModel unet = UNet.builder().build();
+		// ZooModel unet = UNet.builder().updater(new Adam(1e-4)).build();
 		// unet.setInputShape(new int[][]{{1, 128, 128}});
 		// ComputationGraph model = (ComputationGraph) unet.init();
 
