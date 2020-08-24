@@ -9,7 +9,6 @@ import org.deeplearning4j.nn.graph.ComputationGraph;
 import org.nd4j.linalg.dataset.api.iterator.DataSetIterator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-//import org.deeplearning4j.zoo.ZooModel;
 
 public class TrainUnetModel {
 
@@ -38,6 +37,8 @@ public class TrainUnetModel {
 
 			log.info("*****TRAIN MODEL******");
 			Fitter fit = new Fitter(imageDataSetIterator, numEpochs);
+			// For using this, uncomment the lines 12,38,39,40 in the class Fitter.java and
+			// comment out line 34
 			ComputationGraph model = fit.FitModel();
 
 			log.warn(model.summary());
