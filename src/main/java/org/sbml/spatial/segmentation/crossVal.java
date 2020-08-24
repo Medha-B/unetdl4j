@@ -115,7 +115,7 @@ public class crossVal {
 				// Now saving the model weights so that it can be tested later with the
 				// corresponding testfold. Need a method to save the testfold so that the images
 				// and labels can be separated.
-				File locationTosave = new File(directory + File.separator + "dataset" + File.separator + "unetSave["
+				File locationTosave = new File(directory + File.separator + "saveModel" + File.separator + "unetSave["
 						+ testFold + "]" + ".zip"); // So that I know which testFold to test this model against
 				// File locationTosave = new File(home + File.separator + "unetSave[" + testFold
 				// + "]" + ".zip");

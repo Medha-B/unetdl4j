@@ -32,8 +32,7 @@ public class UnetLoadAndTest {
 			log.info("*****LOAD MODEL******");
 			// Location where the model is saved
 			// File locationTosave = new File(home + File.separator + "unetSave.zip");
-			// Depends upon where the model weights are actually saved
-			// File locationTosave = new File(directory + File.separator + "unetSave.zip");
+
 			File locationTosave = new File(directory + File.separator + "saveModel" + File.separator + "unetSave.zip");
 			ComputationGraph model = ModelSerializer.restoreComputationGraph(locationTosave);
 

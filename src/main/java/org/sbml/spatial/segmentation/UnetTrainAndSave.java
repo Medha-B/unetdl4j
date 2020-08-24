@@ -35,7 +35,7 @@ public class UnetTrainAndSave {
 
 			// Location for saving the model
 			// File locationTosave = new File(home + File.separator + "unetSave.zip");
-			File locationTosave = new File(directory + File.separator + "unetSave.zip");
+			File locationTosave = new File(directory + File.separator + "saveModel" + File.separator + "unetSave.zip");
 			boolean saveUpdater = false;
 			// ModelSerializer needs Model name, Location of saving the model and
 			// saveUpdater.

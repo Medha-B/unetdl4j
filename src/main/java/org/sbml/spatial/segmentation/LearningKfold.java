@@ -159,7 +159,8 @@ public class LearningKfold {
 				// Where to save the model
 				// File locationTosave = new File(home + File.separator + "unetSave[" + testFold
 				// + "]" + ".zip");
-				File locationTosave = new File(directory + File.separator + "unetSave[" + testFold + "]" + ".zip");
+				File locationTosave = new File(directory + File.separator + "saveModel" + File.separator + "unetSave["
+						+ testFold + "]" + ".zip");
 				boolean saveUpdater = false;
 
 				// ModelSerializer needs Model name, saveUpdater and Location of saving the
