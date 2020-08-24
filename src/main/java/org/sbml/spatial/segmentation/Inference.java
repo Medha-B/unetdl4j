@@ -6,6 +6,7 @@ import java.io.File;
 
 import org.datavec.image.loader.NativeImageLoader;
 import org.deeplearning4j.nn.graph.ComputationGraph;
+import org.deeplearning4j.zoo.ZooModel;
 import org.nd4j.linalg.api.ndarray.INDArray;
 
 /**
@@ -22,12 +23,34 @@ import org.nd4j.linalg.api.ndarray.INDArray;
  *
  */
 public class Inference {
+	/**
+	 * ComputationGraph model the deep learning model (U-Net)
+	 */
 	private ComputationGraph model;
-	// private ZooModel model;
+	/**
+	 * ZooModel model2 the deep learning model (U-Net) to be used when setting 1
+	 * input channel
+	 */
+	private ZooModel model2;
+	/**
+	 * String path the path for input image
+	 */
 	private String path;
+	/**
+	 * String directory the path for working directory
+	 */
 	private String directory;
+	/**
+	 * int Width the width of input image set to 128
+	 */
 	public static final int WIDTH = 128;
+	/**
+	 * int HEIGHT the height of input image set to 128
+	 */
 	public static final int HEIGHT = 128;
+	/**
+	 * int Channels the number of input channels in image set to 3
+	 */
 	public static final int CHANNELS = 3;
 
 	/**
@@ -46,10 +69,11 @@ public class Inference {
 		this.directory = directory;
 	}
 
-	/*
-	 * public Inference(ZooModel model, String path, String directory) { this.model
-	 * = model; this.path = path; this.directory = directory;}
-	 */
+	public Inference(ZooModel model, String path, String directory) {
+		this.model2 = model;
+		this.path = path;
+		this.directory = directory;
+	}
 
 	// For inferring the model
 

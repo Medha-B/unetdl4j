@@ -48,8 +48,17 @@ public class crossVal {
 	 */
 
 	private static final Logger log = LoggerFactory.getLogger(crossVal.class);
+	/**
+	 * int Width of the input images, set to 128
+	 */
 	private static final int WIDTH = 128;
+	/**
+	 * int Height of the input images, set to 128
+	 */
 	private static final int HEIGHT = 128;
+	/**
+	 * int Channels of the input images, set to 3 (RGB)
+	 */
 	private static final int CHANNELS = 3;
 
 	public static void main(String[] args) {

@@ -26,8 +26,17 @@ import org.slf4j.LoggerFactory;
 
 public class UnetIOU {
 	private static final Logger log = LoggerFactory.getLogger(UnetIOU.class);
+	/**
+	 * int Width the width of input image set to 128
+	 */
 	private static final int WIDTH = 128;
+	/**
+	 * int HEIGHT the height of input image set to 128
+	 */
 	private static final int HEIGHT = 128;
+	/**
+	 * int Channels the number of input channels in image set to 3
+	 */
 	private static final int CHANNELS = 3;
 
 	public static void main(String[] args) {

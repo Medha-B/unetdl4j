@@ -25,10 +25,25 @@ import org.nd4j.linalg.dataset.api.preprocessor.ImagePreProcessingScaler;
  */
 
 public class PreProcess {
+	/**
+	 * int Width the width of input image set to 128
+	 */
 	public static final int WIDTH = 128;
+	/**
+	 * int HEIGHT the height of input image set to 128
+	 */
 	public static final int HEIGHT = 128;
+	/**
+	 * int Channels the number of input channels in image set to 3
+	 */
 	public static final int CHANNELS = 3;
+	/**
+	 * File RootDir the input file containing images
+	 */
 	private File Rootdir;
+	/**
+	 * int batchSize the size of every batch
+	 */
 	private int batchSize;
 
 	/**

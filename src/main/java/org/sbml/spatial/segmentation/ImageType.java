@@ -20,6 +20,9 @@ import javax.imageio.ImageIO;
  */
 public class ImageType {
 
+	/**
+	 * File imageFile the input image file
+	 */
 	private File imageFile;
 
 	/**

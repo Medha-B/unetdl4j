@@ -23,6 +23,9 @@ import org.datavec.image.loader.NativeImageLoader;
 
 public class UnetPathLabelGenerator implements PathLabelGenerator {
 	// private NativeImageLoader imageLoader = new NativeImageLoader(256,256,1);
+	/**
+	 * NativeImageLoader imageLoader to load the images of given dimensions
+	 */
 	private NativeImageLoader imageLoader = new NativeImageLoader(128, 128, 1);
 
 	@Override

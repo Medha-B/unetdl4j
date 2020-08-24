@@ -24,7 +24,14 @@ import org.nd4j.linalg.learning.config.Adam;
  *
  */
 public class Fitter {
+	/**
+	 * DataSetIterator imageDataSetIterator the input DataSetIterator for model
+	 * training
+	 */
 	private DataSetIterator imageDataSetIterator;
+	/**
+	 * int numEpochs the number of epochs for model fitting
+	 */
 	private int numEpochs;
 
 	/**
