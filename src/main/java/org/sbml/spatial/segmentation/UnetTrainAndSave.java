@@ -8,6 +8,19 @@ import org.nd4j.linalg.dataset.api.iterator.DataSetIterator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * The class UnetTrainAndSave.
+ * 
+ * This class is used for training the U-Net model and subsequently saving the
+ * model weights. Date Created: July 5, 2020
+ * 
+ * @author Medha Bhattacharya
+ * @author Akira Funahashi
+ * @author Yuta Tokuoka
+ * @author Kaito Ii
+ *
+ */
+
 //This class is for training the UNet model on any number of images and then saving it.
 public class UnetTrainAndSave {
 

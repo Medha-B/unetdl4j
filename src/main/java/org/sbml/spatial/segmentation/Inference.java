@@ -8,6 +8,19 @@ import org.datavec.image.loader.NativeImageLoader;
 import org.deeplearning4j.nn.graph.ComputationGraph;
 import org.nd4j.linalg.api.ndarray.INDArray;
 
+/**
+ * The class Inference.
+ * 
+ * This class allows model inference by taking an unsegmented microscopic
+ * cellular image as input and it returns a segmented image. Date Created:
+ * August 1, 2020
+ * 
+ * @author Medha Bhattacharya
+ * @author Akira Funahashi
+ * @author Yuta Tokuoka
+ * @author Kaito Ii
+ *
+ */
 public class Inference {
 	private ComputationGraph model;
 	// private ZooModel model;
@@ -16,6 +29,16 @@ public class Inference {
 	public static final int WIDTH = 128;
 	public static final int HEIGHT = 128;
 	public static final int CHANNELS = 3;
+
+	/**
+	 * 
+	 * Constructor for class Inference.java. Takes model, path and directory as
+	 * input.
+	 * 
+	 * @param model     the ComputationGraph Model
+	 * @param path      the string for path of the target unsegmented image
+	 * @param directory the string for working directory
+	 */
 
 	public Inference(ComputationGraph model, String path, String directory) {
 		this.model = model;
@@ -29,6 +52,13 @@ public class Inference {
 	 */
 
 	// For inferring the model
+
+	/**
+	 * The method which returns inferred image.
+	 * 
+	 * @return bufferedImage the inferred image of type BufferedImage
+	 */
+
 	public BufferedImage imgOut() {
 		BufferedImage bufferedImage = new BufferedImage(WIDTH, HEIGHT, BufferedImage.TYPE_BYTE_GRAY);
 		;

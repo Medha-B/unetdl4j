@@ -11,6 +11,19 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 //import org.deeplearning4j.zoo.ZooModel;
 
+/**
+ * The class TrainUnetModel.
+ * 
+ * This class is used for training the U-Net model for single input channel.
+ * Date Created: July 5, 2020
+ * 
+ * @author Medha Bhattacharya
+ * @author Akira Funahashi
+ * @author Yuta Tokuoka
+ * @author Kaito Ii
+ *
+ */
+
 public class TrainUnetModel {
 
 	private static final Logger log = LoggerFactory.getLogger(TrainUnetModel.class);

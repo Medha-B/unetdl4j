@@ -11,6 +11,20 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 //This class is for training the UNet model on any number of images and then testing it.
+
+/**
+ * The class UnetTrainAndTest.
+ * 
+ * This class is used for training the U-Net model and subsequently inferring
+ * images from the trained model. Date Created: July 5, 2020
+ * 
+ * @author Medha Bhattacharya
+ * @author Akira Funahashi
+ * @author Yuta Tokuoka
+ * @author Kaito Ii
+ *
+ */
+
 public class UnetTrainAndTest {
 
 	private static final Logger log = LoggerFactory.getLogger(UnetTrainAndTest.class);

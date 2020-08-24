@@ -10,15 +10,40 @@ import org.deeplearning4j.zoo.model.UNet;
 import org.nd4j.linalg.dataset.api.iterator.DataSetIterator;
 import org.nd4j.linalg.learning.config.Adam;
 
+/**
+ * The class Fitter.
+ * 
+ * This class is used for fitting the U-Net model over the given dataset. Date
+ * Created: August 2, 2020
+ * 
+ * @author Medha Bhattacharya
+ * @author Akira Funahashi
+ * @author Yuta Tokuoka
+ * @author Kaito Ii
+ *
+ */
 public class Fitter {
 	private DataSetIterator imageDataSetIterator;
 	private int numEpochs;
+
+	/**
+	 * Constructor for the class Fitter.java
+	 * 
+	 * @param imageDataSetIterator
+	 * @param numEpochs
+	 */
 
 	public Fitter(DataSetIterator imageDataSetIterator, int numEpochs) {
 		this.imageDataSetIterator = imageDataSetIterator;
 		this.numEpochs = numEpochs;
 	}
 
+	/**
+	 * This is used for fitting the model for the given DataSetIterator over the
+	 * given number of epochs.
+	 * 
+	 * @return ComputationGraph model
+	 */
 	public ComputationGraph FitModel() {
 		/*
 		 * Map<Integer, Double> learningScheduleMap = new HashMap<>();

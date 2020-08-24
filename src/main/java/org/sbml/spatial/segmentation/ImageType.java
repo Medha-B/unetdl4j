@@ -6,15 +6,39 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
+/**
+ * The class ImageType.
+ * 
+ * This class implements inference image formatting for the deep-learning model
+ * U-Net. Date Created: August 1, 2020
+ * 
+ * @author Medha Bhattacharya
+ * @author Akira Funahashi
+ * @author Yuta Tokuoka
+ * @author Kaito Ii
+ *
+ */
 public class ImageType {
 
 	private File imageFile;
+
+	/**
+	 * Constructor for class ImageType.java. Takes the target image file as
+	 * parameter.
+	 * 
+	 * @param imageFile which is the target image file.
+	 */
 
 	public ImageType(File imageFile) {
 		this.imageFile = imageFile;
 	}
 
-	// RGB TO BGR for enhanced performance
+	/**
+	 * For conversion from RGB to BGR for enhanced memory performance
+	 * 
+	 * @param bufferedImage which is of type BufferedImage
+	 * @return bufferedImage which is of type BufferedImage
+	 */
 	public BufferedImage getBGRBufferedImage(BufferedImage bufferedImage) {
 		for (int w = 0; w < bufferedImage.getWidth(); w++) {
 			for (int h = 0; h < bufferedImage.getHeight(); h++) {
@@ -31,6 +55,10 @@ public class ImageType {
 		return bufferedImage;
 	}
 
+	/**
+	 * Calls the getBGRBufferedImage(BufferedImage bufferedImage) function after
+	 * reading the image file. Used for handling exceptions.
+	 */
 	public BufferedImage getBGRBufferedImage() {
 		try {
 			BufferedImage bufferedImage = ImageIO.read(this.imageFile);

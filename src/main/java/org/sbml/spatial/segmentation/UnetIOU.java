@@ -11,6 +11,19 @@ import org.nd4j.linalg.indexing.conditions.Conditions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * The class UnetIOU.
+ * 
+ * This class is used to obtain IOU values and Dice Coefficient for images
+ * inferred from the U-Net model . Date Created: July 9, 2020
+ * 
+ * @author Medha Bhattacharya
+ * @author Akira Funahashi
+ * @author Yuta Tokuoka
+ * @author Kaito Ii
+ *
+ */
+
 public class UnetIOU {
 	private static final Logger log = LoggerFactory.getLogger(UnetIOU.class);
 	private static final int WIDTH = 128;

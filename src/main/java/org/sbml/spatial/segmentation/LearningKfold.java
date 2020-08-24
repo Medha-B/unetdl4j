@@ -28,6 +28,20 @@ import org.nd4j.linalg.learning.config.Adam;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * The class LearningKfold.
+ * 
+ * This class implements automatic k-fold cross-validation for the deep-learning
+ * model U-Net and created as an auxiliary for CrossVal.java. Date Created: July
+ * 20, 2020
+ * 
+ * @author Medha Bhattacharya
+ * @author Akira Funahashi
+ * @author Yuta Tokuoka
+ * @author Kaito Ii
+ * 
+ */
+
 public class LearningKfold {
 
 	private static final Logger log = LoggerFactory.getLogger(LearningKfold.class);

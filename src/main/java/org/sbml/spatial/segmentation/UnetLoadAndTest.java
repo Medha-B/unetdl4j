@@ -11,6 +11,20 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 //This is for loading the saved UNet model and then testing it.
+
+/**
+ * The class UnetLoadAndTest.
+ * 
+ * This class is used for inferring images by loading the saved and trained
+ * U-Net model weights. Date Created: July 5, 2020
+ * 
+ * @author Medha Bhattacharya
+ * @author Akira Funahashi
+ * @author Yuta Tokuoka
+ * @author Kaito Ii
+ *
+ */
+
 public class UnetLoadAndTest {
 
 	private static final Logger log = LoggerFactory.getLogger(UnetLoadAndTest.class);
