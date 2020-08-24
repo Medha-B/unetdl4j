@@ -30,7 +30,7 @@ public class PreProcess {
 	 */
 	public static final int WIDTH = 128;
 	/**
-	 * int HEIGHT the height of input image set to 128
+	 * int Height the height of input image set to 128
 	 */
 	public static final int HEIGHT = 128;
 	/**
@@ -50,7 +50,7 @@ public class PreProcess {
 	 * Constructor for class PreProcess.java.
 	 * 
 	 * @param Rootdir   the input file (dataset)
-	 * @param batchSize
+	 * @param batchSize the size per batch
 	 */
 	public PreProcess(File Rootdir, int batchSize) {
 		this.Rootdir = Rootdir;
@@ -62,8 +62,8 @@ public class PreProcess {
 	 * Method for initializing the splitting of input imageRecordReader; handles
 	 * exception.
 	 * 
-	 * @param imageRecordReader
-	 * @param fileSplit
+	 * @param imageRecordReader the ImageRecordReader
+	 * @param fileSplit         the FileSplit
 	 */
 
 	public void Fsplit(ImageRecordReader imageRecordReader, FileSplit fileSplit) {

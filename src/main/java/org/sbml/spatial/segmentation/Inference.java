@@ -45,7 +45,7 @@ public class Inference {
 	 */
 	public static final int WIDTH = 128;
 	/**
-	 * int HEIGHT the height of input image set to 128
+	 * int Height the height of input image set to 128
 	 */
 	public static final int HEIGHT = 128;
 	/**

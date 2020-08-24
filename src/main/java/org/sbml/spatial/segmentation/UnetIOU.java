@@ -31,7 +31,7 @@ public class UnetIOU {
 	 */
 	private static final int WIDTH = 128;
 	/**
-	 * int HEIGHT the height of input image set to 128
+	 * int Height the height of input image set to 128
 	 */
 	private static final int HEIGHT = 128;
 	/**

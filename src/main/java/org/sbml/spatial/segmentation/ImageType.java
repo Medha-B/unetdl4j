@@ -40,7 +40,7 @@ public class ImageType {
 	 * For conversion from RGB to BGR for enhanced memory performance
 	 * 
 	 * @param bufferedImage which is of type BufferedImage
-	 * @return bufferedImage which is of type BufferedImage
+	 * @return bufferedImage which is of type BufferedImage after processing it
 	 */
 	public BufferedImage getBGRBufferedImage(BufferedImage bufferedImage) {
 		for (int w = 0; w < bufferedImage.getWidth(); w++) {
@@ -61,6 +61,8 @@ public class ImageType {
 	/**
 	 * Calls the getBGRBufferedImage(BufferedImage bufferedImage) function after
 	 * reading the image file. Used for handling exceptions.
+	 * 
+	 * @return bufferedImage the BufferedImage after processing it
 	 */
 	public BufferedImage getBGRBufferedImage() {
 		try {
@@ -68,8 +70,8 @@ public class ImageType {
 			return getBGRBufferedImage(bufferedImage);
 		} catch (IOException e) {
 			e.printStackTrace();
+			return null;
 		}
-		return null;
 	}
 
 }

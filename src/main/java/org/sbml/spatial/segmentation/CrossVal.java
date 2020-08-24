@@ -27,7 +27,14 @@ import org.slf4j.LoggerFactory;
  * The class CrossVal.
  * 
  * This class implements automatic k-fold cross-validation for the deep-learning
- * model U-Net. Date Created: July 16, 2020
+ * model U-Net.
+ * <ol>
+ * <li>Splits the dataset in to k folds</li>
+ * <li>Trains the model over k-1 folds over k-iterations</li>
+ * <li>Evaluates each trained model against the left-out fold per iteration and
+ * finally saves the best performing model</li>
+ * </ol>
+ * Date Created: July 16, 2020
  * 
  * @author Medha Bhattacharya
  * @author Akira Funahashi
@@ -36,16 +43,6 @@ import org.slf4j.LoggerFactory;
  *
  */
 public class CrossVal {
-
-	/**
-	 * For k-fold cross validation of U-Net model over the given dataset.
-	 * <ol>
-	 * <li>Splits the dataset in to k folds</li>
-	 * <li>Trains the model over k-1 folds over k-iterations</li>
-	 * <li>Evaluates each trained model against the left-out fold per iteration and
-	 * finally saves the best performing model</li>
-	 * </ol>
-	 */
 
 	private static final Logger log = LoggerFactory.getLogger(CrossVal.class);
 	/**

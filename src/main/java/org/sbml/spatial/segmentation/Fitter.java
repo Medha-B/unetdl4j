@@ -37,8 +37,8 @@ public class Fitter {
 	/**
 	 * Constructor for the class Fitter.java
 	 * 
-	 * @param imageDataSetIterator
-	 * @param numEpochs
+	 * @param imageDataSetIterator the DataSetIterator
+	 * @param numEpochs            the number of epochs
 	 */
 
 	public Fitter(DataSetIterator imageDataSetIterator, int numEpochs) {
