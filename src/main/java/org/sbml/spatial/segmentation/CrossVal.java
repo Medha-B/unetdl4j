@@ -35,7 +35,7 @@ import org.slf4j.LoggerFactory;
  * @author Kaito Ii
  *
  */
-public class crossVal {
+public class CrossVal {
 
 	/**
 	 * For k-fold cross validation of U-Net model over the given dataset.
@@ -47,7 +47,7 @@ public class crossVal {
 	 * </ol>
 	 */
 
-	private static final Logger log = LoggerFactory.getLogger(crossVal.class);
+	private static final Logger log = LoggerFactory.getLogger(CrossVal.class);
 	/**
 	 * int Width of the input images, set to 128
 	 */
