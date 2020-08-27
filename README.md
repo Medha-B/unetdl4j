@@ -8,9 +8,10 @@ This project is the implementation of U-Net using the Deeplearning4j library. De
 The base dataset consists of wide-field epifluorescent images of mouse neuroblastoma cells (cultured neurons) with cytoplasmic (phalloidin) stain and a set of manual segmentations.
 
 Featured project: Autosegmentation of cultured neurons
+
 Link: http://flagella.crbs.ucsd.edu/images/CCDB_6843
 
-The actual dataset used for this project images of single cells cropped from the images in the base dataset.
+The actual dataset used for this project is comprised of microscopic images of single cells cropped from the images in the base dataset.
 
 ## Sample Datasets
 
