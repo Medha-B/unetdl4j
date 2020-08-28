@@ -1,6 +1,6 @@
 # unetdl4j
 
-U-Net is a convolutional neural network that was developed for biomedical image segmentation which yields precise segmentation upon training over even a small image dataset. This network gets its U-shaped architecture from a contracting path, which follows the typical architecture of a convolutional network and an expanding path, which consists of an upsampling of the feature map followed by a convolution per step.
+U-Net is a convolutional neural network developed for biomedical image segmentation and yields precise segmentation upon training over even a small image dataset. This network gets its U-shaped architecture from a contracting path, which follows the typical architecture of a convolutional network and an expanding path, which consists of an upsampling of the feature map followed by a convolution per step.
 
 
 This project is the implementation of U-Net using the Deeplearning4j library. Deeplearning4j is the first commercial-grade, open-source, distributed deep-learning library written for Java.
