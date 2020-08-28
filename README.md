@@ -1,4 +1,5 @@
 # unetdl4j
+
 U-Net is a convolutional neural network that was developed for biomedical image segmentation which yields precise segmentation upon training over even a small image dataset. This network gets its U-shaped architecture from a contracting path, which follows the typical architecture of a convolutional network and an expanding path, which consists of an upsampling of the feature map followed by a convolution per step.
 
 
@@ -44,6 +45,47 @@ Instructions on:
 ```
 
 ## How to run
+Intructions on running class:
+
+- UnetTrainAndTest.java
+
+This class is used for training the U-Net model on a custom dataset and subsequently inferring one or more images from the trained model. The training and testing datasets can be saved in the 'dataset' folder under the working directory. Similarly, the inferred image gets saved in the 'output' folder.
+
+```sh
+% java -cp target/segmentation-1.0-SNAPSHOT-bin.jar org.sbml.spatial.segmentation.UnetTrainAndTest
+```
+
+- UnetTrainAndSave.java
+
+This class is used for training the U-Net model on a custom dataset and subsequently saving the model weights. The training dataset and the trained model can be saved in the 'dataset' and 'saveModel' folders respectively in the working directory.
+
+```sh
+% java -cp target/segmentation-1.0-SNAPSHOT-bin.jar org.sbml.spatial.segmentation.UnetTrainAndSave
+```
+
+- UnetLoadAndTest.java
+
+This class is used for inferring images by loading the saved and trained U-Net model. The testing dataset and models weights can be saved in the 'dataset' and 'saveModel' folders respectively in the working directory.
+
+```sh
+% java -cp target/segmentation-1.0-SNAPSHOT-bin.jar org.sbml.spatial.segmentation.UnetLoadAndTest
+```
+
+- UnetIOU.java
+
+This class is used to obtain IOU values and Dice Coefficient for one or more images inferred from the U-Net model and the associated ground truth images. The dataset containing inferred and corresponding ground truth images can be saved in the 'dataset' folder in the working directory.
+
+```sh
+% java -cp target/segmentation-1.0-SNAPSHOT-bin.jar org.sbml.spatial.segmentation.UnetIOU
+```
+
+- TrainUnetModel
+
+This class is used for training the U-Net model for single channel (grayscale) images. 
+
 ```sh
 % java -cp target/segmentation-1.0-SNAPSHOT-bin.jar org.sbml.spatial.segmentation.TrainUnetModel
 ```
+## Documentation
+
+Javadocs of unetdl4j are present in the docs ```sh doc ``` directory in the repository.
