@@ -88,4 +88,4 @@ This class is used for training the U-Net model for single channel (grayscale) i
 ```
 ## Documentation
 
-Javadocs of unetdl4j are present in the docs ``` doc ``` directory in the repository.
+Javadocs of unetdl4j are present in the ``` doc ``` directory in the repository.
