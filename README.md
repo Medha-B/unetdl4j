@@ -38,14 +38,14 @@ Instructions on:
 ```sh
 % git clone https://github.com/Medha-B/unetdl4j.git
 ```
-- Compile
+- Compiling
 ```sh
 % mvn compile
 % mvn package   # create jar
 ```
 
 ## How to run
-Intructions on running class:
+Intructions on running the class:
 
 - UnetTrainAndTest.java
 
