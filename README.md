@@ -49,7 +49,7 @@ Intructions on running the class:
 
 - UnetTrainAndTest.java
 
-This class is used for training the U-Net model on a custom dataset and subsequently inferring one or more images from the trained model. The training and testing datasets can be saved in the 'dataset' folder under the working directory. Similarly, the inferred image gets saved in the 'output' folder.
+This class is used for training the U-Net model on a custom dataset and subsequently inferring one or more images from the trained model. The training and testing datasets can be saved in the 'dataset' folder under the working directory. Similarly, the inferred image gets saved in the 'output' folder. For example, the dataset https://drive.google.com/drive/folders/1Ox0fi1V9dwBXPHisgLc9kjaIfZFZ27dy?usp=sharing can be downloaded and saved in the 'small_dataset' folder (https://github.com/Medha-B/unetdl4j/tree/master/dataset/small_dataset) under 'dataset' folder in local workspace to run the code successfully.
 
 ```sh
 % java -cp target/segmentation-1.0-SNAPSHOT-bin.jar org.sbml.spatial.segmentation.UnetTrainAndTest
