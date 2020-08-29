@@ -49,7 +49,7 @@ Intructions on running the class:
 
 - UnetTrainAndTest.java
 
-This class is used for training the U-Net model on a custom dataset and subsequently inferring one or more images from the trained model. The training and testing datasets can be saved in the 'dataset' folder under the working directory. Similarly, the inferred image gets saved in the 'output' folder. The [sample dataset] (https://drive.google.com/drive/folders/1Ox0fi1V9dwBXPHisgLc9kjaIfZFZ27dy?usp=sharing) can be downloaded and saved in the [small_dataset](https://github.com/Medha-B/unetdl4j/tree/master/dataset/small_dataset) under [dataset](https://github.com/Medha-B/unetdl4j/tree/master/dataset) folder in local workspace to run the code successfully.
+This class is used for training the U-Net model on a custom dataset and subsequently inferring one or more images from the trained model. The training and testing datasets can be saved in the 'dataset' folder under the working directory. Similarly, the inferred image gets saved in the 'output' folder. The [sample dataset](https://drive.google.com/drive/folders/1Ox0fi1V9dwBXPHisgLc9kjaIfZFZ27dy?usp=sharing) can be downloaded and saved in the [small_dataset](https://github.com/Medha-B/unetdl4j/tree/master/dataset/small_dataset) under [dataset](https://github.com/Medha-B/unetdl4j/tree/master/dataset) folder in local workspace to run the code successfully.
 
 ```sh
 % java -cp target/segmentation-1.0-SNAPSHOT-bin.jar org.sbml.spatial.segmentation.UnetTrainAndTest
@@ -88,7 +88,7 @@ This class is used for training the U-Net model for single channel (grayscale) i
 ```
 ## Documentation
 
-Javadocs of unetdl4j are present in the ``` doc ``` directory in the repository.
+Javadocs of unetdl4j are present in the [doc](https://github.com/Medha-B/unetdl4j/tree/master/doc) directory in the repository.
 
 ## Licensing
 
