@@ -8,27 +8,28 @@ This project is the implementation of U-Net using the Deeplearning4j library. De
 
 The base dataset consists of wide-field epifluorescent images of mouse neuroblastoma cells (cultured neurons) with cytoplasmic (phalloidin) stain and a set of manual segmentations.
 
-Featured project: Autosegmentation of cultured neurons
-
-Link: <http://flagella.crbs.ucsd.edu/images/CCDB_6843>
+Featured project: [Autosegmentation of cultured neurons](http://flagella.crbs.ucsd.edu/images/CCDB_6843)
 
 The actual dataset used for this project is comprised of microscopic images of single cells cropped from the images in the base dataset.
+
+- [Cell images](https://drive.google.com/drive/folders/17EMpftIiXo9IWT-0YyqIaiBNzIKzD3Ii?usp=sharing)
+- [Ground Truth images](https://drive.google.com/drive/folders/12PB5LtSkFJSRyLGk7rmL8NZSQJe3Km06?usp=sharing)
 
 ## Sample Datasets
 
 ### For Training
 
-- 100 microscopic cellular images with the corresponding labels: <https://drive.google.com/drive/folders/1u3SgJYb1LObpboEKkURQr3Mh7FrPrf_8?usp=sharing>
+- [100 microscopic cellular images with the corresponding labels](https://drive.google.com/drive/folders/1u3SgJYb1LObpboEKkURQr3Mh7FrPrf_8?usp=sharing)
 
-- 300 microscopic cellular images with the corresponding labels: <https://drive.google.com/drive/folders/1UUq6W-3P7Mg-eSE6_UJSCQaC8Xazc3zH?usp=sharing>
+- [300 microscopic cellular images with the corresponding labels](https://drive.google.com/drive/folders/1UUq6W-3P7Mg-eSE6_UJSCQaC8Xazc3zH?usp=sharing)
 
-- 44 microscopic cellular images with the corresponding labels (easy training): <https://drive.google.com/drive/folders/1Ox0fi1V9dwBXPHisgLc9kjaIfZFZ27dy?usp=sharing>
+- [44 microscopic cellular images with the corresponding labels (easy training)](https://drive.google.com/drive/folders/1Ox0fi1V9dwBXPHisgLc9kjaIfZFZ27dy?usp=sharing)
 
- - 44 microscopic cellular images with the corresponding labels (split for cross validation): <https://drive.google.com/drive/folders/1eyRLg1s110ID-T8Oa4Je0xB9fqyy-zZr?usp=sharing>
+- [44 microscopic cellular images with the corresponding labels (split for cross validation)](https://drive.google.com/drive/folders/1eyRLg1s110ID-T8Oa4Je0xB9fqyy-zZr?usp=sharing)
 
 ### For Testing
 
- - 20 microscopic cellular images: <https://drive.google.com/drive/folders/1lNphWDWUDq6U4K25kP-zHL8U4ETawuDE?usp=sharing>
+ - [20 microscopic cellular images](https://drive.google.com/drive/folders/1lNphWDWUDq6U4K25kP-zHL8U4ETawuDE?usp=sharing)
 
 
 ## How to compile
