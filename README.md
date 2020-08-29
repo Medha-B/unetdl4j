@@ -10,7 +10,7 @@ The base dataset consists of wide-field epifluorescent images of mouse neuroblas
 
 Featured project: Autosegmentation of cultured neurons
 
-Link: http://flagella.crbs.ucsd.edu/images/CCDB_6843
+Link: <http://flagella.crbs.ucsd.edu/images/CCDB_6843>
 
 The actual dataset used for this project is comprised of microscopic images of single cells cropped from the images in the base dataset.
 
@@ -18,17 +18,17 @@ The actual dataset used for this project is comprised of microscopic images of s
 
 ### For Training
 
-- 100 microscopic cellular images with the corresponding labels: https://drive.google.com/drive/folders/1u3SgJYb1LObpboEKkURQr3Mh7FrPrf_8?usp=sharing
+- 100 microscopic cellular images with the corresponding labels: <https://drive.google.com/drive/folders/1u3SgJYb1LObpboEKkURQr3Mh7FrPrf_8?usp=sharing>
 
-- 300 microscopic cellular images with the corresponding labels: https://drive.google.com/drive/folders/1UUq6W-3P7Mg-eSE6_UJSCQaC8Xazc3zH?usp=sharing
+- 300 microscopic cellular images with the corresponding labels: <https://drive.google.com/drive/folders/1UUq6W-3P7Mg-eSE6_UJSCQaC8Xazc3zH?usp=sharing>
 
-- 44 microscopic cellular images with the corresponding labels (easy training): https://drive.google.com/drive/folders/1Ox0fi1V9dwBXPHisgLc9kjaIfZFZ27dy?usp=sharing
+- 44 microscopic cellular images with the corresponding labels (easy training): <https://drive.google.com/drive/folders/1Ox0fi1V9dwBXPHisgLc9kjaIfZFZ27dy?usp=sharing>
 
- - 44 microscopic cellular images with the corresponding labels (split for cross validation): https://drive.google.com/drive/folders/1eyRLg1s110ID-T8Oa4Je0xB9fqyy-zZr?usp=sharing
+ - 44 microscopic cellular images with the corresponding labels (split for cross validation): <https://drive.google.com/drive/folders/1eyRLg1s110ID-T8Oa4Je0xB9fqyy-zZr?usp=sharing>
 
 ### For Testing
 
- - 20 microscopic cellular images: https://drive.google.com/drive/folders/1lNphWDWUDq6U4K25kP-zHL8U4ETawuDE?usp=sharing
+ - 20 microscopic cellular images: <https://drive.google.com/drive/folders/1lNphWDWUDq6U4K25kP-zHL8U4ETawuDE?usp=sharing>
 
 
 ## How to compile
@@ -49,7 +49,7 @@ Intructions on running the class:
 
 - UnetTrainAndTest.java
 
-This class is used for training the U-Net model on a custom dataset and subsequently inferring one or more images from the trained model. The training and testing datasets can be saved in the 'dataset' folder under the working directory. Similarly, the inferred image gets saved in the 'output' folder. For example, the dataset https://drive.google.com/drive/folders/1Ox0fi1V9dwBXPHisgLc9kjaIfZFZ27dy?usp=sharing can be downloaded and saved in the 'small_dataset' folder (https://github.com/Medha-B/unetdl4j/tree/master/dataset/small_dataset) under 'dataset' folder in local workspace to run the code successfully.
+This class is used for training the U-Net model on a custom dataset and subsequently inferring one or more images from the trained model. The training and testing datasets can be saved in the 'dataset' folder under the working directory. Similarly, the inferred image gets saved in the 'output' folder. The [sample dataset] (https://drive.google.com/drive/folders/1Ox0fi1V9dwBXPHisgLc9kjaIfZFZ27dy?usp=sharing) can be downloaded and saved in the [small_dataset](https://github.com/Medha-B/unetdl4j/tree/master/dataset/small_dataset) under [dataset](https://github.com/Medha-B/unetdl4j/tree/master/dataset) folder in local workspace to run the code successfully.
 
 ```sh
 % java -cp target/segmentation-1.0-SNAPSHOT-bin.jar org.sbml.spatial.segmentation.UnetTrainAndTest
@@ -89,3 +89,7 @@ This class is used for training the U-Net model for single channel (grayscale) i
 ## Documentation
 
 Javadocs of unetdl4j are present in the ``` doc ``` directory in the repository.
+
+## Licensing
+
+unetdl4j is licensed under the Apache License, Version 2.0. See [LICENSE](https://github.com/Medha-B/unetdl4j/blob/master/LICENSE.txt) for the complete text.
