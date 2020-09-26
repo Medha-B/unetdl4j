@@ -47,17 +47,18 @@ public class UnetIOU {
 			String dataPath = directory + File.separator + "dataset";
 
 			// This is for setting the path to ground truth image
-			String pathToGroundTruth;
+			String pathToGroundTruth = null;
 			if (args.length > 0) {
 				pathToGroundTruth = args[0];
 			} else {
 				pathToGroundTruth = dataPath + File.separator + "Inference(300x100)" + File.separator + "gt_20.tif";
+
 			}
 
 			// This is for setting the path to inferred image
-			String pathToInferredImage;
+			String pathToInferredImage = null;
 			if (args.length > 0) {
-				pathToInferredImage = args[0];
+				pathToInferredImage = args[1];
 			} else {
 				pathToInferredImage = dataPath + File.separator + "Inference(300x100)" + File.separator + "inf_20.tif";
 			}
