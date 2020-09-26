@@ -57,7 +57,7 @@ public class UnetIOU {
 			// This is for setting the path to inferred image
 			String pathToInferredImage;
 			if (args.length > 0) {
-				pathToInferredImage = args[0];
+				pathToInferredImage = args[1];
 			} else {
 				pathToInferredImage = dataPath + File.separator + "Inference(300x100)" + File.separator + "inf_20.tif";
 			}
