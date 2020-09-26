@@ -53,7 +53,7 @@ Intructions on running the class:
 This class is used for training the U-Net model on a custom dataset and subsequently inferring one or more images from the trained model. The training and testing datasets can be saved in the 'dataset' folder under the working directory. Similarly, the inferred image gets saved in the 'output' folder. The [sample dataset](https://drive.google.com/drive/folders/1Ox0fi1V9dwBXPHisgLc9kjaIfZFZ27dy?usp=sharing) can be downloaded and saved in the [small_dataset](https://github.com/Medha-B/unetdl4j/tree/master/dataset/small_dataset) under [dataset](https://github.com/Medha-B/unetdl4j/tree/master/dataset) folder in local workspace to run the code successfully.
 
 ```sh
-% java -cp target/segmentation-1.0-SNAPSHOT-bin.jar org.sbml.spatial.segmentation.UnetTrainAndTest
+% java -cp target/segmentation-1.0-SNAPSHOT-bin.jar org.sbml.spatial.segmentation.UnetTrainAndTest </path/to/small_dataset>
 ```
 
 - UnetTrainAndSave.java
@@ -61,7 +61,7 @@ This class is used for training the U-Net model on a custom dataset and subseque
 This class is used for training the U-Net model on a custom dataset and subsequently saving the model weights. The training dataset and the trained model can be saved in the 'dataset' and 'saveModel' folders respectively in the working directory.
 
 ```sh
-% java -cp target/segmentation-1.0-SNAPSHOT-bin.jar org.sbml.spatial.segmentation.UnetTrainAndSave
+% java -cp target/segmentation-1.0-SNAPSHOT-bin.jar org.sbml.spatial.segmentation.UnetTrainAndSave </path/to/dataset>
 ```
 
 - UnetLoadAndTest.java
@@ -69,7 +69,7 @@ This class is used for training the U-Net model on a custom dataset and subseque
 This class is used for inferring images by loading the saved and trained U-Net model. The testing dataset and models weights can be saved in the 'dataset' and 'saveModel' folders respectively in the working directory.
 
 ```sh
-% java -cp target/segmentation-1.0-SNAPSHOT-bin.jar org.sbml.spatial.segmentation.UnetLoadAndTest
+% java -cp target/segmentation-1.0-SNAPSHOT-bin.jar org.sbml.spatial.segmentation.UnetLoadAndTest </path/to/test_image>
 ```
 
 - UnetIOU.java
@@ -77,7 +77,7 @@ This class is used for inferring images by loading the saved and trained U-Net m
 This class is used to obtain IOU values and Dice Coefficient for one or more images inferred from the U-Net model and the associated ground truth images. The dataset containing inferred and corresponding ground truth images can be saved in the 'dataset' folder in the working directory.
 
 ```sh
-% java -cp target/segmentation-1.0-SNAPSHOT-bin.jar org.sbml.spatial.segmentation.UnetIOU
+% java -cp target/segmentation-1.0-SNAPSHOT-bin.jar org.sbml.spatial.segmentation.UnetIOU </path/to/ground_truth_image> </path/to/inferred_image> 
 ```
 
 - TrainUnetModel
@@ -85,7 +85,7 @@ This class is used to obtain IOU values and Dice Coefficient for one or more ima
 This class is used for training the U-Net model for single channel (grayscale) images. 
 
 ```sh
-% java -cp target/segmentation-1.0-SNAPSHOT-bin.jar org.sbml.spatial.segmentation.TrainUnetModel
+% java -cp target/segmentation-1.0-SNAPSHOT-bin.jar org.sbml.spatial.segmentation.TrainUnetModel </path/to/test_image>
 ```
 ## Documentation
 
