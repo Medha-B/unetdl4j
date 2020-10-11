@@ -17,6 +17,8 @@ import org.deeplearning4j.nn.graph.ComputationGraph;
 import org.deeplearning4j.optimize.listeners.ScoreIterationListener;
 import org.deeplearning4j.util.ModelSerializer;
 import org.deeplearning4j.zoo.model.UNet;
+import org.nd4j.linalg.api.ndarray.INDArray;
+import org.nd4j.linalg.dataset.DataSet;
 import org.nd4j.linalg.dataset.api.preprocessor.DataNormalization;
 import org.nd4j.linalg.dataset.api.preprocessor.ImagePreProcessingScaler;
 import org.nd4j.linalg.learning.config.Adam;
@@ -107,7 +109,7 @@ public class CrossVal {
 			// RecordReaderDatasetIterator for each split input
 			RecordReaderDataSetIterator[] set = new RecordReaderDataSetIterator[k];
 			for (i = 0; i < k; i++) {
-				set[i] = new RecordReaderDataSetIterator(imageReader[i], batchSize, 1, 1, true);
+				set[i] = new RecordReaderDataSetIterator(imageReader[i], batchSize, 1, 1, false);
 				scaler.fit(set[i]);
 				set[i].setPreProcessor(scaler);
 
@@ -124,32 +126,39 @@ public class CrossVal {
 
 			// Training the model for cross validation
 			int testFold = 0;
+
 			while (testFold < k) {
-				ComputationGraph model = UNet.builder().updater(new Adam(1e-4)).build().init(); // Initializing a new
+				ComputationGraph model = UNet.builder().updater(new Adam(1e-4)).build().init(); // Initializing a new //
 																								// model
 				model.addListeners(new ScoreIterationListener());
 				// System.out.println("Initializing new model");
 				for (i = 0; i < k; i++) {
-
 					if (i == testFold) {
 						continue; // Model is not trained on the testfold
 					} else {
 						System.out.println("fitting model"); // Model gets trained on all folds except the testFold
 						model.fit(set[i], numEpochs);
 					}
-
 				}
 
+				DataSet tf = set[testFold].next();
+				INDArray[] fea = new INDArray[] { tf.getFeatures() };
+				INDArray[] lab = new INDArray[] { tf.getLabels() };
+
+				// Will create a new class for inference with INDArray[] fea (features) and then
+				// use the INDArray[] lab (labels) for IOU
+
 				// Now saving the model weights so that it can be tested later with the
-				// corresponding testfold. Need a method to save the testfold so that the images
-				// and labels can be separated.
+				// corresponding testfold.
+
 				File locationTosave = new File(directory + File.separator + "saveModel" + File.separator + "unetSave["
 						+ testFold + "]" + ".zip"); // So that I know which testFold to test this model against
 				// File locationTosave = new File(home + File.separator + "unetSave[" + testFold
-				// + "]" + ".zip");
+				// // + "]" + ".zip");
 				boolean saveUpdater = false;
 				ModelSerializer.writeModel(model, locationTosave, saveUpdater);
 				testFold++;
+
 			}
 
 		} catch (Exception e) {
